@@ -5,9 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../styles/product.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+    </style>
 </head>
 <body>
     <main class="container">
+
+        <header>
+            <nav class="navbar">
+                
+                <div class="nav-brand">
+
+                    <div class="nav-logo">
+                        <img src="../assets/icons/Vector.svg" alt="...">
+                        <h3>coffee Shop</h3>
+                    </div>
+
+                    <ul class="nav-page">
+                        <li><a href="/" class="active-page">Home</a></li>
+                        <li><a href="./pages/product.html">Product</a></li>
+                    </ul>
+
+                </div>
+
+                <div class="toggle-menu" id="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <ul class="navbar-nav" id="navbar-nav">
+                        <li><a href="/" class="home">Home</a></li>
+                        <li><a href="./pages/product.html" class="product">Product</a></li> 
+                        <li><a href="../pages/login.html" ><img src="../assets/icons/magnifying-glass.ico" alt="Magnifying Glass Icon" class="icon-magnifying-glass"></a></li>
+                        <li><a href="../pages/login.html" ><img src="../assets/icons/shopping-cart.ico" alt="Shopping Cart Icon" class="icon-shopping"></a></li>
+                        <li><a href="./pages/login.html"><button class="sign-in">Sign In</button></a></li>
+                        <li><a href="./pages/register.html"><button class="sign-up">Sign Up</button></a></li>       
+                </ul> 
+
+                
+
+
+            </nav>
+        </header>
 
         <section class="hero-image">
             <h1>We Provide Good Coffee and Healthy Meals</h1>
@@ -97,6 +138,191 @@
                 <div class="lingkaran"></div>
             </div>
         </section>
+
+        <section class="product-section">
+            <div class="filter-container">
+
+                <div class="filter-content">
+
+                    <div class="filter-heading">
+                        <h1>Filter</h1>
+                        <a href="">Reset Filter</a>
+                    </div>
+                    
+                    <div class="search-content">
+                        <label class="search-text " for="searchFilter">search</label>
+                        <input class="search-form" type="text" name="searchFilter" placeholder="Search Your Product">
+                    </div>
+
+                    <div class="category-content">
+                        <h1>Category</h1>
+                        <form action="" class="category-form">
+                            <div class="checkbox-container">
+                                <input class="category-check" type="checkbox" id="favoriteProduct" name="categoryCheck">
+                                <label class="category-text" for="favoriteProduct">Favorite Product</label>
+                            </div>
+                            <div class="checkbox-container">
+                                <input class="category-check" type="checkbox" id="coffee" name="categoryCheck">
+                                <label class="category-text" for="coffee">Coffee</label>
+                            </div>
+                            <div class="checkbox-container">
+                                <input class="category-check" type="checkbox" id="nonCoffee" name="categoryCheck">
+                                <label class="category-text" for="nonCoffee">Non Coffee</label>
+                            </div>
+                            <div class="checkbox-container">
+                                <input class="category-check" type="checkbox" id="addOn" name="categoryCheck">
+                                <label class="category-text" for="addOn">Add-On</label>
+                            </div>
+                        </form>
+                        
+                    </div>
+
+                    <div class="category-content">
+                        <h1>Sort By</h1>
+                        <form action="" class="category-form">
+                            <div class="checkbox-container">
+                                <input class="category-check" type="checkbox" id="favoriteProduct" name="categoryCheck">
+                                <label class="category-text" for="favoriteProduct">Buy 1 get 1</label>
+                            </div>
+                            <div class="checkbox-container">
+                                <input class="category-check" type="checkbox" id="coffee" name="categoryCheck">
+                                <label class="category-text" for="coffee">Flash sale</label>
+                            </div>
+                            <div class="checkbox-container">
+                                <input class="category-check" type="checkbox" id="nonCoffee" name="categoryCheck">
+                                <label class="category-text" for="nonCoffee">Birthday Package</label>
+                            </div>
+                            <div class="checkbox-container">
+                                <input class="category-check" type="checkbox" id="addOn" name="categoryCheck">
+                                <label class="category-text" for="addOn">Cheap</label>
+                            </div>
+                        </form>
+                        
+                    </div>
+
+                    <div class="price-range">
+                        <div>
+                            <p class="price-range-text ">Range Price</p>
+                        </div>
+                        <div>
+                            <div class="price-range-slider">
+                                <input type="range" min="1" max="100" value="25" class="price-slider" id="priceRange1">
+                            </div>
+                        </div>
+                        <button class="filter-button">Apply Filter</button>
+                    </div>
+
+                </div>
+            </div>
+            <div class="product-container">
+                <div class="slide-content">
+
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="../assets/images/a63f096d3edcb57b0bc937039acae071.png" alt="..." class="card-img">        
+                        </div>
+                        <div class="card-content">
+                            <h1 class="name-product">Hazelnut Latte</h1>
+                            <p class="description-product">You can explore the menu that we provide with fun and have their own taste and make your day better.</p>
+                            <p class="price-product">IDR 20.000</p>
+                            <div class="btn-content">
+                                <button class="btn-buy">buy</button>
+                                <button class="icon-shopping-cart"><img src="../assets/icons/ShoppingCart.svg" alt=""></button>
+                            </div>
+    
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="../assets/images/a63f096d3edcb57b0bc937039acae071.png" alt="..." class="card-img">        
+                        </div>
+                        <div class="card-content">
+                            <h1 class="name-product">Hazelnut Latte</h1>
+                            <p class="description-product">You can explore the menu that we provide with fun and have their own taste and make your day better.</p>
+                            <p class="price-product">IDR 20.000</p>
+                            <div class="btn-content">
+                                <button class="btn-buy">buy</button>
+                                <button class="icon-shopping-cart"><img src="../assets/icons/ShoppingCart.svg" alt=""></button>
+                            </div>
+    
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="../assets/images/a63f096d3edcb57b0bc937039acae071.png" alt="..." class="card-img">        
+                        </div>
+                        <div class="card-content">
+                            <h1 class="name-product">Hazelnut Latte</h1>
+                            <p class="description-product">You can explore the menu that we provide with fun and have their own taste and make your day better.</p>
+                            <p class="price-product">IDR 20.000</p>
+                            <div class="btn-content">
+                                <button class="btn-buy">buy</button>
+                                <button class="icon-shopping-cart"><img src="../assets/icons/ShoppingCart.svg" alt=""></button>
+                            </div>
+    
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="../assets/images/a63f096d3edcb57b0bc937039acae071.png" alt="..." class="card-img">        
+                        </div>
+                        <div class="card-content">
+                            <h1 class="name-product">Hazelnut Latte</h1>
+                            <p class="description-product">You can explore the menu that we provide with fun and have their own taste and make your day better.</p>
+                            <p class="price-product">IDR 20.000</p>
+                            <div class="btn-content">
+                                <button class="btn-buy">buy</button>
+                                <button class="icon-shopping-cart"><img src="../assets/icons/ShoppingCart.svg" alt=""></button>
+                            </div>
+    
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="../assets/images/a63f096d3edcb57b0bc937039acae071.png" alt="..." class="card-img">        
+                        </div>
+                        <div class="card-content">
+                            <h1 class="name-product">Hazelnut Latte</h1>
+                            <p class="description-product">You can explore the menu that we provide with fun and have their own taste and make your day better.</p>
+                            <p class="price-product">IDR 20.000</p>
+                            <div class="btn-content">
+                                <button class="btn-buy">buy</button>
+                                <button class="icon-shopping-cart"><img src="../assets/icons/ShoppingCart.svg" alt=""></button>
+                            </div>
+    
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="../assets/images/a63f096d3edcb57b0bc937039acae071.png" alt="..." class="card-img">        
+                        </div>
+                        <div class="card-content">
+                            <h1 class="name-product">Hazelnut Latte</h1>
+                            <p class="description-product">You can explore the menu that we provide with fun and have their own taste and make your day better.</p>
+                            <p class="price-product">IDR 20.000</p>
+                            <div class="btn-content">
+                                <button class="btn-buy">buy</button>
+                                <button class="icon-shopping-cart"><img src="../assets/icons/ShoppingCart.svg" alt=""></button>
+                            </div>
+    
+                        </div>
+                    </div>
+
+                    <div class="slide-angka">
+                        <div class="lingkaran-angka"><p>1</p></div>
+                        <div class="lingkaran-angka"><p>2</p></div>
+                        <div class="lingkaran-angka"><p>3</p></div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
 
     </main>
 </body>

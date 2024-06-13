@@ -3,215 +3,121 @@
   box-sizing: border-box;
   width: 100%;
 }
-
-/* NAVBAR */
-
-
 .navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
+  background-color: #0B132A;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(11, 9, 9, 0.2);
-  color: white; 
-  padding: 10px 60px; 
-  z-index: 1000;
+  gap: 50px;
+  padding: 10px 10%;
 }
 
-.navbar .brandNav {
+
+.navbar .nav-brand {
   display: flex;
   align-items: center;
 }
-
-.navbar .brand {
+.navbar .nav-logo {
   display: flex;
   align-items: center;
   gap: 15px;
 }
-
-.navbar img {
+.nav-logo img {
   filter: brightness(0) invert(1);
   width: 24px; 
   height: auto; 
 }
-
-.navbar .link {
+.nav-logo h3{
+  color: #fff;
+  white-space: nowrap;
+}
+.nav-brand .nav-page {
   align-items: center;
   list-style: none;
   gap: 15px;
   display:flex;
 }
-
-.link li a {
+.nav-page a {
   text-decoration: none;
   color: white;
   border: none;
 }
 
-.navbar .buttonIcon {
-  list-style:none;
+.navbar .navbar-nav {
+  list-style-type: none;
   display: flex;
   align-items: center;
   gap: 20px;
 }
 
-.buttonIcon .home,
-.buttonIcon .product {
+.navbar-nav .home,
+.navbar-nav .product {
   text-decoration: none;
   color: white;
   border: none;
   display:none;
 }
-
-.navbar .btn1 {
+.navbar-nav .icon-magnifying-glass,.icon-shopping{
+  filter: brightness(0) invert(1);
+  width: 24px;
+  height: auto;
+}
+.navbar-nav .sign-in {
   border-radius: 5px;
   padding: 10px 24px;
   border: 1px solid transparent;
   border-color: #FFFFFF;
   background-color: transparent; 
   color: white;
+  white-space: nowrap;
 }
-
-.navbar .btn2 {
+.navbar-nav .sign-up {
   border-radius: 5px;
   padding: 10px 24px;
   background-color: #FF8906; 
   opacity: 1;
   border: none;
+  white-space: nowrap;
 }
 
-.check{
+@media screen and (max-width: 768px) {
+  .nav-brand .nav-page {
   display:none;
 }
-.navbar .toggle-btn{
-  color: #fff;
-  font-size: 24px;
-  cursor:pointer;
-  display: none;
-}
-
-@media only screen and (max-width : 768px){
-  .navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
+  .toggle-menu {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgba(11, 9, 9, 0.2);
-    color: white; 
-    padding: 10px 15px; 
-    z-index: 100;
-  }
-
-  .navbar:before {
-    content: '';
-    position: absolute;
-    top:0;
-    left:0;
-    width:100vw;
-    height:100%;
-    background-color: rgba(11, 9, 9, 0.2);
-    z-index:-1;
-  }
-  
-  .navbar .brandNav {
-    display: flex;
-    align-items: center;
-  }
-  
-  .navbar .brand {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-  }
-  
-  .navbar img {
-    filter: brightness(0) invert(1);
-    width: 24px; 
-    height: auto; 
-  }
-  
-  .navbar .link {
-    align-items: center;
-    list-style: none;
-    gap: 15px;
-    display:none;
-  }
-  
-  .link li a {
-    text-decoration: none;
-    color: white;
-    border: none;
-  }
-  
-  .buttonIcon {
-    position: absolute;
-    top: 100%;
-    left:0;
-    width: 100%;
-    height: 0;
-    background-color: rgba(0 ,0 ,0 , .1);
-    backdrop-filter: blur(50px);
-    list-style: none;
-    transition: .3s ease;
-    display: none;
-  }
-
-
-  .buttonIcon a {
-    display: block;
+    flex-direction: column;
+    gap: 8px;
+    cursor: pointer;
     margin: 10px;
   }
-  
-  .buttonIcon .home,
-  .buttonIcon .product {
-    text-decoration: none;
-    color: white;
-    border: none;
-    display:block;
-  }
-  
-  
-  .navbar .btn1 {
-    border-radius: 5px;
-    padding: 10px 24px;
-    border: 1px solid transparent;
-    border-color: #FFFFFF;
-    background-color: transparent; 
-    color: white;
-  }
-  
-  
-  .navbar .btn2 {
-    border-radius: 5px;
-    padding: 10px 24px;
-    background-color: #FF8906; 
-    opacity: 1;
-    border: none;
-  }
-
-  .navbar .toggle-btn{
-    color: #fff;
-    font-size: 24px;
-    cursor: pointer;
-    z-index: 101;
-    align-self: flex-end; 
-  }
-
-  .hidden {
-    display: none;
-  }
-
-  .show {
+  .toggle-menu span {
     display: block;
-    height: 17.7rem;
+    background-color: #fff;
+    height: 2px;
+    width: 35px;
+    margin-left: auto;
   }
+  .navbar{
+    position: relative;
+    padding: 20px;
 
+  }
+  .navbar .navbar-nav {
+    width: 100%;
+    height:17.7rm ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    display: none;
+    right: 0;
+    padding: 35px 0;
+  }
+  .navbar .navbar-nav .show{
+    display: block;
+  }
 }
-
 /* Hero Saction */
 
 .hero-saction {
@@ -234,16 +140,19 @@
 }
 
 .hero-container h1 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 28px;
   font-weight: 500;
 }
 
 .hero-container p {
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 16px;
   font-weight: 400;
 }
 
 .hero-container button {
+  font-family: 'Plus Jakarta Sans', sans-serif;
   width:143px;
   border-radius: 5px;
   padding: 10px 24px;
@@ -261,11 +170,14 @@
 }
 
 .content-statistik h1 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 28px;
   color: #FF8906; 
 }
 
 .content-statistik p {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 400;
   font-size: 16px;
   color: #fff;
 }
@@ -309,6 +221,12 @@
     grid-template-rows: 1fr;
     grid-template-columns: 50% 50%;
   }
+  .hero-container h1 {
+    font-size: 48px;
+  }
+  .content-statistik h1{
+    font-size: 48px;
+  }
   
 }
 
@@ -342,8 +260,14 @@
   background-color: #FF8906
 }
 .about-heading h1 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 28px;
   font-weight: 500;
+}
+.about-heading p {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
 }
 .blacks{
   color: #0B132A;
@@ -364,7 +288,9 @@
   gap: 10px;
 }
 .about-content p {
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 14px;
+  font-weight: 400;
 } 
 .about-content img {
   width: 18px;
@@ -421,8 +347,7 @@
     height: 68px;
   }
   .about-heading h1 {
-    font-size: 38px;
-    font-weight: 500;
+    font-size: 48px;
   }
 
 } 
@@ -445,6 +370,8 @@
   gap: 10px;
 }
 .favorite-container h1 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 500;
   text-align: center;
   font-size: 28px;
 }
@@ -455,6 +382,8 @@
   margin: 0 auto;
 }
 .favorite-container p{
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 400;
   text-align: center;
   font-size: 16px;
 }
@@ -513,18 +442,24 @@
   align-items: center;
   justify-content: center;
 }
-.card-content .nama {
+.card-content .nama-product {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 500;
   color: #0B132A;
   font-size: 22px;
   margin-bottom: 12px; 
 }
-.card-content .description {
+.card-content .description-product {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 400;
   color: #4F5665;
   font-size: 14px;
   margin-bottom: 12px; 
   word-wrap: break-word;
 }
-.card-content .price {
+.card-content .price-product {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 500;
   color: #FF8906;
   font-size: 22px;
   margin-bottom: 12px; 
@@ -578,7 +513,9 @@
 @media screen and (min-width: 884px){
   .slide-content {
     max-width: 1509px;
-    
+  }
+  .favorite-container h1 {
+    font-size: 48px;
   }
 } 
 /* mapshop-section */
@@ -598,6 +535,8 @@
   text-align: center;
 }
 .mapshop-container h1 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 500;
   font-size: 28px;
   color: #8E6447;
 }
@@ -611,6 +550,8 @@
   margin: 0 auto;
 }
 .mapshop-container p{
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 400;
   font-size: 16px;
   margin: 0 auto; 
 }
@@ -640,6 +581,9 @@
   .mapshop-container h1{
     font-size: 48px;
     width: 500;
+  }
+  .mapshop-container h1{
+    font-size: 48px;
   }
   .mapshop-container p{
     width: 529px;
@@ -676,6 +620,8 @@
   gap: 5px;
 }
 .testimoni-container .heading {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 500;
   font-size: 16px;
   color: #fff;
   font-weight: 400;
@@ -683,6 +629,8 @@
   align-items: center;
 }
 .testimoni-container .name{
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 500;
   display: flex;
   align-items: center;
   gap: 14px;
@@ -694,12 +642,15 @@
   height: 50px;
 }
 .name h1{
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 500;
   font-size: 28px;
   color: #fff;
   display: flex;
   align-items: center;
 }
 .testimoni-container .job {
+  font-family: 'Plus Jakarta Sans', sans-serif;
   color: #FF8906;
   font-size: 16px;
   font-weight: 400;
@@ -707,6 +658,7 @@
   align-items: center;
 }
 .testimoni-container .comment{
+  font-family: 'Plus Jakarta Sans', sans-serif;
   color: #fff;
   font-size: 16px;
   font-weight: 400;
@@ -773,10 +725,23 @@
 }
 @media screen and (min-width: 884px){
   .testimoni-section {
-    height: 60vh;
+    height: 80vh;
     display: grid;
     grid-template-columns: 1fr  1fr;
     grid-template-rows: 1fr;
+  }
+  .testimoni-image {
+    display: grid;
+    align-items: center;
+    justify-content: end;
+    padding-right: 5%;
+  }
+  .testimoni-image img {
+    width: 478px;
+    height:332px ;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    object-position: top;
   }
   .testimoni-container {
     margin: 10px;
