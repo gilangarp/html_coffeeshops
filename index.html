@@ -250,34 +250,7 @@
             </div>
 
         </section>
-
-        <footer>
-            <p>&copy; 2024 Halaman Beranda. All rights reserved.</p>
-        </footer>
-
-
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
-                const toggleBtn = document.querySelector(".toggle-btn");
-                const menuImg = document.getElementById("menu");
-                const closeImg = document.getElementById("close");
-                const linkList = document.querySelector(".buttonIcon");
-            
-                toggleBtn.addEventListener("click", function(event) {
-                    event.preventDefault(); // Prevent default link behavior
-                
-                    if (menuImg.classList.contains("hidden")) {
-                        menuImg.classList.remove("hidden");
-                        closeImg.classList.add("hidden");
-                        linkList.classList.add("show");
-                    } else {
-                        menuImg.classList.add("hidden");
-                        closeImg.classList.remove("hidden");
-                        linkList.classList.remove("show"); 
-                    }
-                });
-            });
-        </script>
+        
     </main>
 </body>
 </html>

@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+.container {
+    height: 100vh;
+    width: 100%;
+}
+.heading-container {
+    height: 20%;
+    padding-left: 5%;
+    display: grid;
+    align-items: center;
+}
+.heading-container .heading {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 500;
+    font-size: 28px;
+    color: black;
+}
+
+.grid-profile{
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+.grid-profile .profile-container {
+    display: grid;
+    place-content: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.profile-content{
+    border: 1px solid #E8E8E8;
+    width: 230px;
+    height: auto;
+    padding: 10px ;
+    display: grid;
+    place-content: center;
+    gap: 15px;
+}
+.profile-container .profile-avatar {
+    width: 113px;
+    height: 113px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.form-container {
+    display: grid;
+    align-items: center;
+}
+.form-container .profile-from {
+    border: 1px solid #DEDEDE;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    padding: 8px 7px 8px 7px;
+    gap: 10px;
+}
+.form-container .profile-from img{
+    width: 24px;
+    height: auto;
+}
+.form-container label{
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #0B132A;
+}
+.form-container .profile-from input{
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+@media screen and (min-width: 480px){
+    .heading-container {
+        padding-left: 5%;
+    }
+    .grid-profile {
+        display: grid;
+        grid-template-columns: auto 1fr;
+
+    }
+    .heading-container {
+        height: 30%;
+    }
+    .heading-container .heading {
+        font-size: 48px;
+    }
+    .profile-content{
+        width: 280px;
+    }
+    .form-container {
+        display: grid;
+        align-items: center;
+    }
+    .form-content{
+        padding: 100px;
+    }
+    .grid-profile .profile-container {
+        padding-left: 50px;
+        padding-right: 5px;
+    }
+  }

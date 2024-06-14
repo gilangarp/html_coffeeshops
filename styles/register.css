@@ -184,6 +184,11 @@
   .register-container {
   display: grid;
   }
+  .register-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  }
   .login-container {
     gap: 30%;
   }
